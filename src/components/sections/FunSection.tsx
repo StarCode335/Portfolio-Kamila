@@ -7,19 +7,19 @@ interface FunSectionProps {
 }
 
 const funFacts = [
-  { emoji: "☕", fact: "I've tried 127 different coffee shops in São Paulo" },
-  { emoji: "🎮", fact: "My all-time favorite game is The Legend of Zelda" },
-  { emoji: "📚", fact: "I read about 30 books per year" },
-  { emoji: "🌍", fact: "I've traveled to 15 countries" },
-  { emoji: "🎵", fact: "My coding playlist has over 500 songs" },
-  { emoji: "🌙", fact: "I'm definitely a night owl" },
+  { emoji: "☕", fact: "Já experimentei 127 cafeterias diferentes em São Paulo" },
+  { emoji: "🎮", fact: "Meu jogo favorito de todos os tempos é The Legend of Zelda" },
+  { emoji: "📚", fact: "Leio cerca de 30 livros por ano" },
+  { emoji: "🌍", fact: "Já viajei para 15 países" },
+  { emoji: "🎵", fact: "Minha playlist de programação tem mais de 500 músicas" },
+  { emoji: "🌙", fact: "Sou definitivamente uma coruja noturna" },
 ];
 
 const questions = [
-  { q: "Tabs or Spaces?", a: "Spaces, always! 2 spaces specifically 😌" },
-  { q: "Coffee or Tea?", a: "Coffee, no doubt. Strong espresso!" },
-  { q: "Light or Dark mode?", a: "Dark mode for life 🌙" },
-  { q: "Mac or PC?", a: "MacBook for development, PC for gaming" },
+  { q: "Tabs ou Espaços?", a: "Espaços, sempre! 2 espaços especificamente 😌" },
+  { q: "Café ou Chá?", a: "Café, sem dúvida. Espresso forte!" },
+  { q: "Light ou Dark mode?", a: "Dark mode para sempre 🌙" },
+  { q: "Mac ou PC?", a: "MacBook para desenvolvimento, PC para jogos" },
 ];
 
 const FunSection = ({ onBack }: FunSectionProps) => {
@@ -45,7 +45,7 @@ const FunSection = ({ onBack }: FunSectionProps) => {
           whileHover={{ x: -5 }}
         >
           <ArrowLeft className="w-5 h-5" />
-          <span className="font-medium">Back</span>
+          <span className="font-medium">Voltar</span>
         </motion.button>
 
         <motion.div
@@ -56,11 +56,11 @@ const FunSection = ({ onBack }: FunSectionProps) => {
         >
           <h1 className="section-title mb-2 flex items-center justify-center gap-3">
             <Sparkles className="w-8 h-8 text-primary" />
-            Fun Zone
+            Zona de Diversão
             <Sparkles className="w-8 h-8 text-primary" />
           </h1>
           <p className="text-muted-foreground">
-            A little corner of randomness and fun facts about me!
+            Um cantinho de curiosidades e fatos divertidos sobre mim!
           </p>
         </motion.div>
 
@@ -73,7 +73,7 @@ const FunSection = ({ onBack }: FunSectionProps) => {
         >
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <Heart className="w-5 h-5 text-primary" />
-            Random Facts About Me
+            Curiosidades Sobre Mim
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {funFacts.map((item, index) => (
@@ -112,7 +112,7 @@ const FunSection = ({ onBack }: FunSectionProps) => {
         >
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <Gamepad2 className="w-5 h-5 text-primary" />
-            Quick Questions (Click to reveal!)
+            Perguntas Rápidas (Clique para revelar!)
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {questions.map((item, index) => (
@@ -141,7 +141,7 @@ const FunSection = ({ onBack }: FunSectionProps) => {
                 </motion.div>
                 {!revealedQuestions.includes(index) && (
                   <p className="text-muted-foreground text-xs mt-2">
-                    Tap to see my answer...
+                    Toque para ver minha resposta...
                   </p>
                 )}
               </motion.div>
@@ -158,17 +158,17 @@ const FunSection = ({ onBack }: FunSectionProps) => {
         >
           <div className="flex items-center justify-center gap-3 mb-3">
             <Coffee className="w-5 h-5 text-primary" />
-            <span className="font-medium text-foreground">Current Status</span>
+            <span className="font-medium text-foreground">Status Atual</span>
             <Music className="w-5 h-5 text-primary" />
           </div>
           <p className="text-muted-foreground text-sm">
-            🎧 Listening to Lo-Fi beats while coding
+            🎧 Ouvindo Lo-Fi beats enquanto programo
           </p>
           <p className="text-muted-foreground text-sm">
-            ☕ On my 3rd coffee of the day
+            ☕ No meu 3º café do dia
           </p>
           <p className="text-muted-foreground text-sm">
-            💻 Building something cool with AI
+            💻 Construindo algo legal com IA
           </p>
         </motion.div>
       </div>

@@ -22,7 +22,7 @@ const socialLinks = [
   },
   {
     icon: Mail,
-    label: "Email",
+    label: "E-mail",
     url: "mailto:hello@kamilasilva.dev",
     color: "hover:text-primary",
   },
@@ -46,7 +46,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
-    toast.success("Message sent! I'll get back to you soon.");
+    toast.success("Mensagem enviada! Entrarei em contato em breve.");
 
     setTimeout(() => {
       setIsSubmitted(false);
@@ -67,7 +67,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
           whileHover={{ x: -5 }}
         >
           <ArrowLeft className="w-5 h-5" />
-          <span className="font-medium">Back</span>
+          <span className="font-medium">Voltar</span>
         </motion.button>
 
         <motion.div
@@ -76,9 +76,9 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title mb-2">Let's Connect</h1>
+          <h1 className="section-title mb-2">Vamos Conectar</h1>
           <p className="text-muted-foreground">
-            Have a project in mind? Let's talk about it!
+            Tem um projeto em mente? Vamos conversar!
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                 htmlFor="name"
                 className="block text-sm font-medium text-foreground mb-2"
               >
-                Name
+                Nome
               </label>
               <input
                 type="text"
@@ -132,7 +132,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                   setFormState({ ...formState, name: e.target.value })
                 }
                 className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                placeholder="Your name"
+                placeholder="Seu nome"
                 required
               />
             </div>
@@ -142,7 +142,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                 htmlFor="email"
                 className="block text-sm font-medium text-foreground mb-2"
               >
-                Email
+                E-mail
               </label>
               <input
                 type="email"
@@ -152,7 +152,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                   setFormState({ ...formState, email: e.target.value })
                 }
                 className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                placeholder="your@email.com"
+                placeholder="seu@email.com"
                 required
               />
             </div>
@@ -162,7 +162,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                 htmlFor="message"
                 className="block text-sm font-medium text-foreground mb-2"
               >
-                Message
+                Mensagem
               </label>
               <textarea
                 id="message"
@@ -172,7 +172,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
                 }
                 rows={5}
                 className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="Me conte sobre seu projeto..."
                 required
               />
             </div>
@@ -187,7 +187,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
               {isSubmitted ? (
                 <>
                   <Check className="w-5 h-5" />
-                  Message Sent!
+                  Mensagem Enviada!
                 </>
               ) : isSubmitting ? (
                 <motion.div
@@ -198,7 +198,7 @@ const ContactSection = ({ onBack }: ContactSectionProps) => {
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  Send Message
+                  Enviar Mensagem
                 </>
               )}
             </motion.button>
