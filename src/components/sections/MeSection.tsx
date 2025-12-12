@@ -8,12 +8,12 @@ interface MeSectionProps {
 
 const MeSection = ({ onBack }: MeSectionProps) => {
   const tags = [
-    "Machine Learning", "Design de Produto", "Startups", "TypeScript", 
-    "Python", "Código Criativo", "UI/UX", "Ciência de Dados"
+    "HTML", "CSS", "JavaScript", "React", "Git", 
+    "Lógica de Programação", "TypeScript", "Design"
   ];
 
   const interests = [
-    "Fotografia", "Viagem", "Café", "Música", "Jogos", "Livros"
+    "Fé", "Música", "Livros", "Tecnologia", "Aprendizado", "Família"
   ];
 
   return (
@@ -64,29 +64,35 @@ const MeSection = ({ onBack }: MeSectionProps) => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div>
-              <h1 className="section-title mb-2">Kamila</h1>
+              <h1 className="section-title mb-2">Maria Kamila</h1>
               <div className="flex flex-wrap gap-4 text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4" />
-                  25 anos
+                  17 anos
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4" />
-                  São Paulo, Brasil
+                  Arapiraca, Alagoas
                 </span>
               </div>
             </div>
 
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                Sou uma Engenheira de IA e Designer de Produtos apaixonada por criar 
-                produtos bonitos e inteligentes. Minha jornada começou na ciência da computação, 
-                mas rapidamente encontrei minha vocação na interseção entre design e tecnologia.
+                Olá! Sou Maria Kamila, tenho 17 anos e sou natural de Arapiraca, Alagoas. 
+                Atualmente estou cursando o 2º ano do ensino médio, e é um momento incrível 
+                da minha vida, cheio de descobertas e desafios.
               </p>
               <p>
-                Quando não estou construindo o futuro da IA, você me encontra explorando novas 
-                cafeterias, capturando momentos com minha câmera ou mergulhando nas últimas 
-                tendências de tecnologia. Acredito em tornar a tecnologia mais humana e acessível.
+                Como católica, acredito que a fé é uma parte importante da minha vida, 
+                e busco sempre me inspirar nos valores que ela me ensina para ser uma 
+                pessoa melhor a cada dia.
+              </p>
+              <p>
+                O que realmente me apaixona é o mundo do desenvolvimento! Sou uma desenvolvedora 
+                iniciante, mas estou determinada a aprender e crescer cada vez mais. A possibilidade 
+                de criar soluções inovadoras, resolver problemas e transformar ideias em realidade 
+                é algo que me motiva e inspira a continuar.
               </p>
             </div>
 
