@@ -47,8 +47,8 @@ const MeSection = ({ onBack }: MeSectionProps) => {
               />
               <div className="relative glass-card p-3">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
-                  alt="Raphael"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=face"
+                  alt="Kamila"
                   className="w-full max-w-[320px] h-auto rounded-2xl object-cover"
                 />
               </div>
@@ -63,7 +63,7 @@ const MeSection = ({ onBack }: MeSectionProps) => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div>
-              <h1 className="section-title mb-2">Raphael Silva</h1>
+              <h1 className="section-title mb-2">Kamila</h1>
               <div className="flex flex-wrap gap-4 text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4" />

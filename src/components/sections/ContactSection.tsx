@@ -11,19 +11,19 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    url: "https://github.com/raphaelsilva",
+    url: "https://github.com/kamilasilva",
     color: "hover:text-foreground",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    url: "https://linkedin.com/in/raphaelsilva",
+    url: "https://linkedin.com/in/kamilasilva",
     color: "hover:text-secondary",
   },
   {
     icon: Mail,
     label: "Email",
-    url: "mailto:hello@raphaelsilva.dev",
+    url: "mailto:hello@kamilasilva.dev",
     color: "hover:text-primary",
   },
 ];

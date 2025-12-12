@@ -34,7 +34,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
             />
             <img
               src={avatar}
-              alt="Raphael Avatar"
+              alt="Kamila Avatar"
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-card border-4 border-glass/80"
             />
           </div>
@@ -47,8 +47,8 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 tracking-tight">
-            Hey, I'm Raphael 👋
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 tracking-tight">
+            Hey, I'm Kamila 👋
           </h1>
           <p className="text-xl md:text-2xl font-medium text-gradient">
             AI Portfolio
