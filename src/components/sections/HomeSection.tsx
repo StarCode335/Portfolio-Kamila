@@ -51,7 +51,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
             Olá, eu sou a Kamila 👋
           </h1>
           <p className="text-xl md:text-2xl font-medium text-gradient">
-            Portfólio de IA
+            Portfólio Dev❤️
           </p>
         </motion.div>
 
