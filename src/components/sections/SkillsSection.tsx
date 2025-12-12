@@ -7,7 +7,7 @@ interface SkillsSectionProps {
 
 const skillCategories = [
   {
-    title: "Hard Skills",
+    title: "Habilidades Técnicas",
     icon: Code,
     color: "from-pastel-blue to-pastel-lilac",
     skills: [
@@ -16,12 +16,12 @@ const skillCategories = [
     ],
   },
   {
-    title: "Soft Skills",
+    title: "Habilidades Comportamentais",
     icon: Brain,
     color: "from-pastel-pink to-pastel-peach",
     skills: [
-      "Leadership", "Communication", "Problem Solving", "Creativity",
-      "Teamwork", "Adaptability", "Time Management", "Critical Thinking"
+      "Liderança", "Comunicação", "Resolução de Problemas", "Criatividade",
+      "Trabalho em Equipe", "Adaptabilidade", "Gestão de Tempo", "Pensamento Crítico"
     ],
   },
   {
@@ -29,12 +29,12 @@ const skillCategories = [
     icon: Palette,
     color: "from-pastel-lilac to-pastel-pink",
     skills: [
-      "Figma", "UI/UX Design", "Prototyping", "Design Systems",
-      "User Research", "Wireframing", "Visual Design", "Accessibility"
+      "Figma", "UI/UX Design", "Prototipagem", "Design Systems",
+      "Pesquisa de Usuário", "Wireframing", "Design Visual", "Acessibilidade"
     ],
   },
   {
-    title: "Tools",
+    title: "Ferramentas",
     icon: Wrench,
     color: "from-pastel-green to-pastel-blue",
     skills: [
@@ -58,7 +58,7 @@ const SkillsSection = ({ onBack }: SkillsSectionProps) => {
           whileHover={{ x: -5 }}
         >
           <ArrowLeft className="w-5 h-5" />
-          <span className="font-medium">Back</span>
+          <span className="font-medium">Voltar</span>
         </motion.button>
 
         <motion.h1
@@ -67,7 +67,7 @@ const SkillsSection = ({ onBack }: SkillsSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Skills & Expertise
+          Habilidades & Especialidades
         </motion.h1>
 
         <div className="grid md:grid-cols-2 gap-6">

@@ -10,17 +10,17 @@ const projects = [
   {
     id: 1,
     title: "NeuraTalk AI",
-    category: "Startup Project",
-    description: "An AI-powered communication platform that enables natural conversations with intelligent assistants. Built with GPT-4 and a custom voice synthesis engine.",
+    category: "Projeto de Startup",
+    description: "Uma plataforma de comunicação alimentada por IA que permite conversas naturais com assistentes inteligentes. Construída com GPT-4 e um motor de síntese de voz personalizado.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    tags: ["AI/ML", "React", "Python"],
+    tags: ["IA/ML", "React", "Python"],
     color: "from-pastel-pink to-pastel-lilac",
   },
   {
     id: 2,
     title: "EcoTracker",
-    category: "Hackathon Winner",
-    description: "Award-winning sustainability app that gamifies carbon footprint tracking. Won 1st place at Climate Tech Hackathon 2024.",
+    category: "Vencedor de Hackathon",
+    description: "Aplicativo premiado de sustentabilidade que gamifica o rastreamento de pegada de carbono. Venceu o 1º lugar no Climate Tech Hackathon 2024.",
     image: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=600&h=400&fit=crop",
     tags: ["React Native", "Node.js", "MongoDB"],
     color: "from-pastel-green to-pastel-blue",
@@ -28,8 +28,8 @@ const projects = [
   {
     id: 3,
     title: "PixelForge Studio",
-    category: "Creative Tool",
-    description: "A generative art platform that combines AI with traditional design tools to create unique digital artwork and NFTs.",
+    category: "Ferramenta Criativa",
+    description: "Uma plataforma de arte generativa que combina IA com ferramentas de design tradicionais para criar obras de arte digitais únicas e NFTs.",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
     tags: ["Canvas API", "Stable Diffusion", "Web3"],
     color: "from-pastel-lilac to-pastel-yellow",
@@ -37,8 +37,8 @@ const projects = [
   {
     id: 4,
     title: "MindFlow",
-    category: "Productivity App",
-    description: "A mindfulness and productivity app that uses AI to create personalized focus sessions and meditation experiences.",
+    category: "App de Produtividade",
+    description: "Um aplicativo de mindfulness e produtividade que usa IA para criar sessões de foco personalizadas e experiências de meditação.",
     image: "https://images.unsplash.com/photo-1545987796-200677ee1011?w=600&h=400&fit=crop",
     tags: ["Flutter", "Firebase", "TensorFlow"],
     color: "from-pastel-blue to-pastel-green",
@@ -69,7 +69,7 @@ const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
           whileHover={{ x: -5 }}
         >
           <ArrowLeft className="w-5 h-5" />
-          <span className="font-medium">Back</span>
+          <span className="font-medium">Voltar</span>
         </motion.button>
 
         <motion.h1
@@ -78,7 +78,7 @@ const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Featured Projects
+          Projetos em Destaque
         </motion.h1>
 
         {/* Carousel */}
@@ -147,7 +147,7 @@ const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      View Project
+                      Ver Projeto
                       <ExternalLink className="w-4 h-4" />
                     </motion.button>
                   </div>

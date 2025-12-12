@@ -9,11 +9,11 @@ interface HomeSectionProps {
 
 const HomeSection = ({ onNavigate }: HomeSectionProps) => {
   const navItems = [
-    { icon: User, label: "Me", section: "me" },
-    { icon: FolderOpen, label: "Projects", section: "projects" },
-    { icon: Wrench, label: "Skills", section: "skills" },
-    { icon: PartyPopper, label: "Fun", section: "fun" },
-    { icon: Mail, label: "Contact", section: "contact" },
+    { icon: User, label: "Sobre Mim", section: "me" },
+    { icon: FolderOpen, label: "Projetos", section: "projects" },
+    { icon: Wrench, label: "Habilidades", section: "skills" },
+    { icon: PartyPopper, label: "Diversão", section: "fun" },
+    { icon: Mail, label: "Contato", section: "contact" },
   ];
 
   return (
@@ -34,7 +34,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
             />
             <img
               src={avatar}
-              alt="Kamila Avatar"
+              alt="Avatar da Kamila"
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-card border-4 border-glass/80"
             />
           </div>
@@ -47,11 +47,11 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 tracking-tight">
-            Hey, I'm Kamila 👋
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 tracking-tight">
+            Olá, eu sou a Kamila 👋
           </h1>
           <p className="text-xl md:text-2xl font-medium text-gradient">
-            AI Portfolio
+            Portfólio de IA
           </p>
         </motion.div>
 
@@ -67,7 +67,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
               <Search className="w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Ask me anything..."
+                placeholder="Me pergunte qualquer coisa..."
                 className="flex-1 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground text-base"
               />
             </div>
