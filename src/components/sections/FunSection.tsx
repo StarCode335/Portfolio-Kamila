@@ -1,25 +1,25 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Sparkles, Coffee, Gamepad2, Music, Heart } from "lucide-react";
+import { ArrowLeft, Sparkles, Heart, Book, Users, Church } from "lucide-react";
 
 interface FunSectionProps {
   onBack: () => void;
 }
 
 const funFacts = [
-  { emoji: "☕", fact: "Já experimentei 127 cafeterias diferentes em São Paulo" },
-  { emoji: "🎮", fact: "Meu jogo favorito de todos os tempos é The Legend of Zelda" },
-  { emoji: "📚", fact: "Leio cerca de 30 livros por ano" },
-  { emoji: "🌍", fact: "Já viajei para 15 países" },
-  { emoji: "🎵", fact: "Minha playlist de programação tem mais de 500 músicas" },
-  { emoji: "🌙", fact: "Sou definitivamente uma coruja noturna" },
+  { emoji: "🏃‍♀️", fact: "Amo correr! É meu momento de reflexão e energia" },
+  { emoji: "👨‍👩‍👧", fact: "Família é tudo pra mim! Amo nossos momentos juntos" },
+  { emoji: "📚", fact: "Adoro ler! Sempre tenho um livro na minha cabeceira" },
+  { emoji: "📺", fact: "Maratonando séries é meu hobby favorito" },
+  { emoji: "🎬", fact: "Amo um bom filme, especialmente com a família" },
+  { emoji: "⛪", fact: "Ir para a igreja é parte essencial da minha semana" },
 ];
 
 const questions = [
-  { q: "Tabs ou Espaços?", a: "Espaços, sempre! 2 espaços especificamente 😌" },
-  { q: "Café ou Chá?", a: "Café, sem dúvida. Espresso forte!" },
-  { q: "Light ou Dark mode?", a: "Dark mode para sempre 🌙" },
-  { q: "Mac ou PC?", a: "MacBook para desenvolvimento, PC para jogos" },
+  { q: "Série ou Filme?", a: "Depende! Séries para maratonar, filmes com a família 🍿" },
+  { q: "Corrida de manhã ou à noite?", a: "De manhã! Adoro começar o dia com energia 🌅" },
+  { q: "Livro físico ou e-book?", a: "Físico, sempre! Amo o cheiro de livro novo 📖" },
+  { q: "Família grande ou pequena?", a: "Grande! Reuniões de família são as melhores 💕" },
 ];
 
 const FunSection = ({ onBack }: FunSectionProps) => {
@@ -111,7 +111,7 @@ const FunSection = ({ onBack }: FunSectionProps) => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <Gamepad2 className="w-5 h-5 text-primary" />
+            <Users className="w-5 h-5 text-primary" />
             Perguntas Rápidas (Clique para revelar!)
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -157,18 +157,18 @@ const FunSection = ({ onBack }: FunSectionProps) => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-3">
-            <Coffee className="w-5 h-5 text-primary" />
+            <Book className="w-5 h-5 text-primary" />
             <span className="font-medium text-foreground">Status Atual</span>
-            <Music className="w-5 h-5 text-primary" />
+            <Church className="w-5 h-5 text-primary" />
           </div>
           <p className="text-muted-foreground text-sm">
-            🎧 Ouvindo Lo-Fi beats enquanto programo
+            📚 Lendo um bom livro
           </p>
           <p className="text-muted-foreground text-sm">
-            ☕ No meu 3º café do dia
+            👨‍👩‍👧 Aproveitando o tempo com a família
           </p>
           <p className="text-muted-foreground text-sm">
-            💻 Construindo algo legal com IA
+            💻 Aprendendo algo novo em programação
           </p>
         </motion.div>
       </div>
