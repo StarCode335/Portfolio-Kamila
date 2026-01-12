@@ -79,8 +79,8 @@ const MeSection = ({ onBack }: MeSectionProps) => {
 
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                Olá! Sou Maria Kamila, tenho 17 anos e sou natural de Arapiraca, Alagoas. 
-                Atualmente estou cursando o 2º ano do ensino médio, e é um momento incrível 
+              Olá! Sou Maria Kamila, tenho 17 anos e sou natural de Arapiraca, Alagoas. 
+                Atualmente estou ingressando no 3º ano do ensino médio, e é um momento incrível 
                 da minha vida, cheio de descobertas e desafios.
               </p>
               <p>
