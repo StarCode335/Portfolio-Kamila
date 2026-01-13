@@ -30,7 +30,7 @@ export const MouseTrail = () => {
       color: colors[colorIndex % colors.length],
     };
 
-    setTrails((prev) => [...prev.slice(-20), newTrail]);
+    setTrails((prev) => [...prev.slice(-30), newTrail]);
     setColorIndex((prev) => prev + 1);
   }, [colorIndex]);
 
@@ -42,7 +42,7 @@ export const MouseTrail = () => {
         throttleTimer = setTimeout(() => {
           handleMouseMove(e);
           throttleTimer = null;
-        }, 30);
+        }, 16); // Mais frequente para rastro mais fluido
       }
     };
 
@@ -56,38 +56,38 @@ export const MouseTrail = () => {
   useEffect(() => {
     const cleanup = setInterval(() => {
       setTrails((prev) => prev.slice(1));
-    }, 100);
+    }, 60);
     return () => clearInterval(cleanup);
   }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
       <AnimatePresence>
-        {trails.map((trail, index) => (
+        {trails.map((trail) => (
           <motion.div
             key={trail.id}
             initial={{ 
               scale: 1, 
-              opacity: 0.8,
-              x: trail.x - 10,
-              y: trail.y - 10,
+              opacity: 0.5,
+              x: trail.x - 30,
+              y: trail.y - 30,
             }}
             animate={{ 
-              scale: 0,
+              scale: 0.3,
               opacity: 0,
             }}
             exit={{ opacity: 0 }}
             transition={{ 
-              duration: 0.8,
+              duration: 1.2,
               ease: "easeOut",
             }}
             className="absolute rounded-full"
             style={{
-              width: 20 - index * 0.5,
-              height: 20 - index * 0.5,
-              backgroundColor: trail.color,
-              boxShadow: `0 0 20px ${trail.color}, 0 0 40px ${trail.color}`,
-              filter: "blur(1px)",
+              width: 60,
+              height: 60,
+              background: `radial-gradient(circle, ${trail.color} 0%, transparent 70%)`,
+              mixBlendMode: "screen",
+              filter: "blur(20px)",
             }}
           />
         ))}
