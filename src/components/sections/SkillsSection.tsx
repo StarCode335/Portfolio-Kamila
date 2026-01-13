@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Code, Brain, Palette, Wrench } from "lucide-react";
+import { ArrowLeft, Code, Brain, Wrench } from "lucide-react";
 
 interface SkillsSectionProps {
   onBack: () => void;
@@ -10,10 +10,7 @@ const skillCategories = [
     title: "Habilidades Técnicas",
     icon: Code,
     color: "from-pastel-blue to-pastel-lilac",
-    skills: [
-      "Python", "TypeScript", "React", "Node.js", 
-      "Machine Learning", "TensorFlow", "PostgreSQL", "AWS"
-    ],
+    skills: ["React", "Node.js", "PostgreSQL"],
   },
   {
     title: "Habilidades Comportamentais",
@@ -25,22 +22,10 @@ const skillCategories = [
     ],
   },
   {
-    title: "Design",
-    icon: Palette,
-    color: "from-pastel-lilac to-pastel-pink",
-    skills: [
-      "Figma", "UI/UX Design", "Prototipagem", "Design Systems",
-      "Pesquisa de Usuário", "Wireframing", "Design Visual", "Acessibilidade"
-    ],
-  },
-  {
     title: "Ferramentas",
     icon: Wrench,
     color: "from-pastel-green to-pastel-blue",
-    skills: [
-      "Git", "Docker", "VS Code", "Notion",
-      "Linear", "Vercel", "Supabase", "Cursor"
-    ],
+    skills: ["VS Code", "Notion", "Git"],
   },
 ];
 
@@ -74,7 +59,7 @@ const SkillsSection = ({ onBack }: SkillsSectionProps) => {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="glass-card-hover p-6"
+              className={`glass-card-hover p-6 ${categoryIndex === 2 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}

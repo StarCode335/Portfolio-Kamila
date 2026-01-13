@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Send, Github, Linkedin, Mail, Check } from "lucide-react";
+import { ArrowLeft, Send, Github, Check } from "lucide-react";
 import { toast } from "sonner";
 
 interface ContactSectionProps {
@@ -11,20 +11,8 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    url: "https://github.com/kamilasilva",
+    url: "https://github.com/mk4amila",
     color: "hover:text-foreground",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    url: "https://linkedin.com/in/kamilasilva",
-    color: "hover:text-secondary",
-  },
-  {
-    icon: Mail,
-    label: "E-mail",
-    url: "mailto:hello@kamilasilva.dev",
-    color: "hover:text-primary",
   },
 ];
 

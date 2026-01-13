@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowLeft, ExternalLink, Rocket, Code, FileText, Users } from "lucide-react";
 
 interface ProjectsSectionProps {
   onBack: () => void;
@@ -9,56 +8,50 @@ interface ProjectsSectionProps {
 const projects = [
   {
     id: 1,
-    title: "NeuraTalk AI",
-    category: "Projeto de Startup",
-    description: "Uma plataforma de comunicação alimentada por IA que permite conversas naturais com assistentes inteligentes. Construída com GPT-4 e um motor de síntese de voz personalizado.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    tags: ["IA/ML", "React", "Python"],
+    title: "DevLinks",
+    icon: Rocket,
+    description: "Uma página moderna e funcional para reunir links importantes em um só lugar.",
+    url: "https://github.com/mk4amila/SENAC-AL-AULAS-DEVLINKS.git",
     color: "from-pastel-pink to-pastel-lilac",
   },
   {
     id: 2,
-    title: "EcoTracker",
-    category: "Vencedor de Hackathon",
-    description: "Aplicativo premiado de sustentabilidade que gamifica o rastreamento de pegada de carbono. Venceu o 1º lugar no Climate Tech Hackathon 2024.",
-    image: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=600&h=400&fit=crop",
-    tags: ["React Native", "Node.js", "MongoDB"],
-    color: "from-pastel-green to-pastel-blue",
+    title: "Aulas de HTML",
+    icon: Code,
+    description: "Projetos práticos desenvolvidos para fixar conceitos essenciais de estrutura web.",
+    url: "https://github.com/mk4amila/SENAC-AL-AULAS-HTML.git",
+    color: "from-pastel-peach to-pastel-pink",
   },
   {
     id: 3,
-    title: "PixelForge Studio",
-    category: "Ferramenta Criativa",
-    description: "Uma plataforma de arte generativa que combina IA com ferramentas de design tradicionais para criar obras de arte digitais únicas e NFTs.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
-    tags: ["Canvas API", "Stable Diffusion", "Web3"],
-    color: "from-pastel-lilac to-pastel-yellow",
+    title: "Aulas de CSS",
+    icon: Code,
+    description: "Projetos práticos focados em estilização e design visual de páginas web.",
+    url: "https://github.com/mk4amila/SENAC-AL-AULAS-CSS.git",
+    color: "from-pastel-blue to-pastel-lilac",
   },
   {
     id: 4,
-    title: "MindFlow",
-    category: "App de Produtividade",
-    description: "Um aplicativo de mindfulness e produtividade que usa IA para criar sessões de foco personalizadas e experiências de meditação.",
-    image: "https://images.unsplash.com/photo-1545987796-200677ee1011?w=600&h=400&fit=crop",
-    tags: ["Flutter", "Firebase", "TensorFlow"],
-    color: "from-pastel-blue to-pastel-green",
+    title: "Aulas de JavaScript",
+    icon: Code,
+    description: "Projetos práticos para aprender interatividade e lógica de programação.",
+    url: "https://github.com/mk4amila/SENAC-AL-AULAS-JAVASCRIPT.git",
+    color: "from-pastel-yellow to-pastel-peach",
+  },
+  {
+    id: 5,
+    title: "CadClientes",
+    icon: Users,
+    description: "Sistema simples de cadastro de clientes, focado em lógica, manipulação de dados e organização do código.",
+    url: "https://github.com/mk4amila/SENAC-AL-AULAS-CADCLIENTES.git",
+    color: "from-pastel-green to-pastel-blue",
   },
 ];
 
 const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextProject = () => {
-    setCurrentIndex((prev) => (prev + 1) % projects.length);
-  };
-
-  const prevProject = () => {
-    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
   return (
     <div className="min-h-screen px-6 py-12">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <motion.button
           className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -72,105 +65,93 @@ const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
           <span className="font-medium">Voltar</span>
         </motion.button>
 
-        <motion.h1
-          className="section-title mb-8 text-center"
+        {/* Header */}
+        <motion.div
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Projetos em Destaque
-        </motion.h1>
+          <h1 className="section-title mb-4 flex items-center justify-center gap-3">
+            <Rocket className="w-8 h-8 text-primary" />
+            Minha Jornada como Programadora de Sistemas
+          </h1>
+        </motion.div>
 
-        {/* Carousel */}
-        <div className="relative">
-          {/* Navigation Arrows */}
-          <motion.button
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full glass-card flex items-center justify-center text-foreground/70 hover:text-foreground transition-colors"
-            onClick={prevProject}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </motion.button>
+        {/* Introduction */}
+        <motion.div
+          className="glass-card p-6 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <p className="text-foreground/80 leading-relaxed text-center">
+            Durante minha formação como Programadora de Sistemas no <span className="text-primary font-semibold">SENAC</span>, 
+            tive a oportunidade de aprender e colocar em prática os fundamentos do desenvolvimento web, 
+            trabalhando com <span className="text-primary font-medium">HTML, CSS e JavaScript</span>. 
+            Mais do que teoria, cada conhecimento foi aplicado na construção de projetos reais, 
+            desenvolvidos do zero, fortalecendo minha lógica, criatividade e organização de código.
+          </p>
+        </motion.div>
 
-          <motion.button
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full glass-card flex items-center justify-center text-foreground/70 hover:text-foreground transition-colors"
-            onClick={nextProject}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ChevronRight className="w-6 h-6" />
-          </motion.button>
-
-          {/* Project Card */}
-          <div className="overflow-hidden px-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
+        {/* Projects Grid */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <h2 className="text-xl font-semibold text-foreground mb-6 text-center">
+            Projetos Desenvolvidos
+          </h2>
+          <div className="grid gap-4">
+            {projects.map((project, index) => (
+              <motion.a
+                key={project.id}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card-hover p-5 flex items-center gap-4 group cursor-pointer"
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="glass-card p-6 md:p-8"
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                whileHover={{ scale: 1.02, x: 5 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  {/* Image */}
-                  <div className="relative rounded-2xl overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${projects[currentIndex].color} opacity-20`} />
-                    <img
-                      src={projects[currentIndex].image}
-                      alt={projects[currentIndex].title}
-                      className="w-full h-64 md:h-80 object-cover"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="space-y-4">
-                    <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
-                      {projects[currentIndex].category}
-                    </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {projects[currentIndex].title}
-                    </h2>
-                    <p className="text-foreground/70 leading-relaxed">
-                      {projects[currentIndex].description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {projects[currentIndex].tags.map((tag) => (
-                        <span key={tag} className="chip">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <motion.button
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium mt-4"
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      Ver Projeto
-                      <ExternalLink className="w-4 h-4" />
-                    </motion.button>
-                  </div>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center flex-shrink-0`}>
+                  <project.icon className="w-6 h-6 text-foreground/80" />
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "w-8 bg-primary"
-                    : "bg-border hover:bg-muted-foreground"
-                }`}
-              />
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+              </motion.a>
             ))}
           </div>
-        </div>
+        </motion.div>
+
+        {/* Closing */}
+        <motion.div
+          className="glass-card p-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <p className="text-foreground/80 leading-relaxed text-center">
+            Todos esses projetos foram pensados, desenvolvidos e construídos durante o curso no SENAC, 
+            unindo aprendizado técnico e prática constante. Cada linha de código representa um passo 
+            na minha trajetória como desenvolvedora e reforça meu compromisso em continuar aprendendo 
+            e evoluindo na área da tecnologia.
+          </p>
+          <p className="text-center mt-4 text-primary font-medium flex items-center justify-center gap-2">
+            ✨ Estou sempre em busca de novos desafios e oportunidades para transformar ideias em soluções digitais.
+          </p>
+        </motion.div>
       </div>
     </div>
   );
